@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gollamudi Venkatesh - DevOps Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --header-bg: #2c3e50;
+            --accent-color: #3498db;
+        }
+
+        body.dark-mode {
+            --bg-color: #1e1e1e;
+            --text-color: #f4f4f4;
+            --header-bg: #111;
+            --accent-color: #3498db;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .toggle-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .toggle-container button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: var(--accent-color);
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1 1 250px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        body.dark-mode .project {
+            background-color: #2c2c2c;
+            color: white;
+        }
+
+        .resume-button {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+            margin-top: 30px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .contact-info {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        body.dark-mode .contact-info {
+            background-color: #2c2c2c;
+            color: white;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .experience {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        body.dark-mode .experience {
+            background-color: #2c2c2c;
+            color: white;
+        }
+
+        html {
+           scroll-behavior: smooth;
+           scroll-padding-top: 200px; /* Add this line */
+}
+
+            </style>
+</head>
+<body>
+
+<header>
+    <h1>Gollamudi Venkatesh</h1>
+    <p>DevOps Engineer | API Tester</p>
+    <div class="toggle-container">
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+    <nav>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#skills"><i class="fas fa-tools"></i> Skills & Tools</a>
+        <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate and results-driven <strong>DevOps Engineer</strong> with hands-on experience in automating, optimizing, and scaling mission-critical deployments in cloud environments. I specialize in building CI/CD pipelines, infrastructure as code, container orchestration, and monitoring solutions to ensure high availability and performance.</p>
+    <a class="resume-button" href="resume.pdf" download><i class="fas fa-download"></i> Download Resume</a>
+</section>
+
+<section id="skills">
+    <h2>Skills & Tools</h2>
+    <ul>
+        <li><strong>DevOps & Automation:</strong> Jenkins, GitHub Actions, Ansible, Terraform</li>
+        <li><strong>Operating Systems:</strong> Linux (Ubuntu, CentOS)</li>
+        <li><strong>Cloud Platforms:</strong> AWS (EC2, EBS, Load Balancer, ASG, RDS, ECS, EKS, Lambda, Lightsail)</li>
+        <li><strong>Containers & Orchestration:</strong> Docker, Kubernetes</li>
+        <li><strong>Monitoring & Security:</strong> New Relic, DataDog, Trivy</li>
+        <li><strong>Version Control & Collaboration:</strong> Git, GitHub, Jira</li>
+        <li><strong>API Testing:</strong> Postman</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <h3>CI/CD Pipeline for Microservices</h3>
+            <p>Built a Jenkins pipeline to automate testing, building, and deployment of microservices to Kubernetes clusters on AWS EKS. Integrated Trivy for image vulnerability scanning and Slack for deployment notifications.</p>
+        </div>
+        <div class="project">
+            <h3>Infrastructure Automation with Terraform</h3>
+            <p>Provisioned complete AWS infrastructure using Terraform including EC2, RDS, Load Balancers, and Auto Scaling Groups. Managed state remotely using S3 and DynamoDB for team collaboration.</p>
+        </div>
+        <div class="project">
+            <h3>API Testing Framework</h3>
+            <p>Designed and executed automated API test suites using Postman for RESTful services. Integrated test results with Jira for bug tracking and reporting.</p>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Work Experience</h2>
+    <div class="experience">
+        <h3>DevOps Engineer - XYZ Technologies</h3>
+        <p><strong>Duration:</strong> Jan 2022 - Present</p>
+        <p>Worked on automating infrastructure provisioning and deployment pipelines using Terraform and Jenkins. Managed Kubernetes clusters and implemented monitoring with DataDog and New Relic.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+        <p><i class="fas fa-phone"></i> Mobile: +91-9876543210</p>
+        <p><i class="fas fa-envelope"></i> Email: venkatesh@example.com</p>
+        <p><i class="fab fa-linkedin"></i> LinkedIn: linkedin.com/in/venkatesh</p>
+        <p><i class="fab fa-github"></i> GitHub: github.com/venkatesh</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Gollamudi Venkatesh. All rights reserved.</p>
+</footer>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+
+</body>
+</html>
